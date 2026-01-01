@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://aviladotgibert.github.io/MERN_example",
+  "homepage": "./",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
