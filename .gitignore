@@ -1,0 +1,66 @@
+# Dependencias
+node_modules/
+package-lock.json
+
+# Variables de entorno (IMPORTANTE: No subir passwords)
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Build del frontend
+frontend/dist/
+frontend/build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores de código
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# PM2
+.pm2/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+
+# Certificados SSL (si los usas)
+*.pem
+*.key
+*.cert
+*.crt
+
+# Backups de MongoDB
+dump/
+*.bson
+
+# Coverage de tests (si los añades)
+coverage/
+.nyc_output/
+
+# Archivos de configuración local personalizados
+config.local.js
+config.local.json

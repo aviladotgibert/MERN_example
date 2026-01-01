@@ -1,0 +1,339 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Mensajes de error */
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #c33;
+}
+
+.error-message button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #c33;
+  padding: 0 10px;
+}
+
+/* Formulario nueva tarea */
+.form-nueva-tarea {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  border: 2px solid #e9ecef;
+}
+
+.form-nueva-tarea h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.form-nueva-tarea input,
+.form-nueva-tarea textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-nueva-tarea input:focus,
+.form-nueva-tarea textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-nueva-tarea textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Botones */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Contenedor de tareas */
+.tareas-container {
+  margin-top: 40px;
+}
+
+.tareas-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.loading,
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+/* Lista de tareas */
+.tareas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Tarjeta de tarea */
+.tarea-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.tarea-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarea-card.completada {
+  background: #f8f9fa;
+  opacity: 0.7;
+}
+
+.tarea-card.completada h3 {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.tarea-contenido {
+  flex: 1;
+}
+
+.tarea-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.tarea-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+.tarea-descripcion {
+  color: #666;
+  margin: 10px 0 10px 36px;
+  line-height: 1.5;
+}
+
+.tarea-fecha {
+  color: #999;
+  font-size: 0.85rem;
+  margin-left: 36px;
+}
+
+/* Acciones de tarea */
+.tarea-acciones {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-editar,
+.btn-eliminar {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.btn-editar {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn-editar:hover {
+  background: #ffb300;
+  transform: translateY(-2px);
+}
+
+.btn-eliminar {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Formulario de edición */
+.form-editar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-editar input,
+.form-editar textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-editar input:focus,
+.form-editar textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.botones-edicion {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-guardar,
+.btn-cancelar {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  flex: 1;
+}
+
+.btn-guardar {
+  background: #28a745;
+  color: white;
+}
+
+.btn-guardar:hover {
+  background: #218838;
+}
+
+.btn-cancelar {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background: #5a6268;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #e9ecef;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .tarea-acciones {
+    flex-direction: column;
+  }
+
+  .btn-editar,
+  .btn-eliminar {
+    width: 100%;
+  }
+}
